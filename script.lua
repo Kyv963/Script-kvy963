@@ -27,7 +27,7 @@ local title = Instance.new("TextLabel", mainFrame)
 title.Size = UDim2.new(1, 0, 0, 40)
 title.Position = UDim2.new(0, 0, 0, 0)
 title.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-title.Text = "anti chnew"
+title.Text = "Nique les Chnew"
 title.Font = Enum.Font.GothamBold
 title.TextSize = 20
 title.TextColor3 = Color3.new(1,1,1)
@@ -345,7 +345,7 @@ local function createFunButton(text, callback)
 end
 
 -- TP random
-createFunButton("🚀 Téléportation aléatoire", function()
+createFunButton("🚀 Random TP", function()
 	local root = LocalPlayer.Character and LocalPlayer.Character:FindFirstChild("HumanoidRootPart")
 	if root then
 		local x = math.random(-300, 300)
@@ -356,7 +356,7 @@ createFunButton("🚀 Téléportation aléatoire", function()
 end)
 
 -- Changer couleur du corps
-createFunButton("🎨 Couleur aléatoire", function()
+createFunButton("🎨 Random colors", function()
 	local char = LocalPlayer.Character
 	if char then
 		for _, part in ipairs(char:GetChildren()) do
@@ -368,7 +368,7 @@ createFunButton("🎨 Couleur aléatoire", function()
 end)
 
 -- Danse
-createFunButton("💃 Faire une danse", function()
+createFunButton("💃 danse", function()
 	local humanoid = LocalPlayer.Character and LocalPlayer.Character:FindFirstChildOfClass("Humanoid")
 	if humanoid then
 		local anim = Instance.new("Animation")
@@ -379,11 +379,11 @@ createFunButton("💃 Faire une danse", function()
 end)
 
 -- Saut en boucle
-createFunButton("🦘 Sauter 5x", function()
+createFunButton("🦘 infini jump", function()
 	local humanoid = LocalPlayer.Character and LocalPlayer.Character:FindFirstChildOfClass("Humanoid")
 	if humanoid then
 		coroutine.wrap(function()
-			for i = 1, 5 do
+			for i = 1, 999 do
 				humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
 				wait(0.5)
 			end
@@ -399,7 +399,7 @@ end)
 local flying = false
 local flyVelocity
 
-createFunButton("🕊️ Toggle Fly", function()
+createFunButton("🕊️ Fly", function()
 	local char = LocalPlayer.Character
 	local root = char and char:FindFirstChild("HumanoidRootPart")
 
